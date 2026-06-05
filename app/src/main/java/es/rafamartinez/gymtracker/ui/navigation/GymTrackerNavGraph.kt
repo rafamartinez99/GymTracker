@@ -3,12 +3,12 @@ package es.rafamartinez.gymtracker.ui.navigation
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import es.rafamartinez.gymtracker.ui.screens.HomeScreen
 import es.rafamartinez.gymtracker.viewmodel.ExerciseViewModel
 import es.rafamartinez.gymtracker.viewmodel.WeightLogViewModel
 
@@ -27,7 +27,7 @@ fun GymTrackerNavGraph(
             .padding(innerPadding)
     ) {
         composable("home") {
-            Text("Home - próximamente")
+            HomeScreen(exerciseViewModel, navController)
         }
     }
 }
